@@ -6,7 +6,7 @@
 - Meghana Lammata
 - Ayusha Timalsena
 - Anwita Gudapuri
-- njali Kolluru
+- Anjali Kolluru
 - Ayush Sheth
 - George Contreras
 - Soumika Seelam
