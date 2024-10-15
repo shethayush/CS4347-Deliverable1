@@ -1,5 +1,5 @@
 # CS4347-Deliverable1
-## WeFiT: A Fitness and Nutrition Tracking Database System
+## WeFiT: A One-Stop-Shop Fitness and Nutrition Tracking System!
 
 - Manasi Vipat
 - Shivani Elitem
