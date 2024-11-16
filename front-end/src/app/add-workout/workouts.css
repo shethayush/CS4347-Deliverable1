@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #058c83;
+    --secondary-color: #46b35f;
+    --delete-color: #c2554a;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #058c83, rgb(0, 31, 29));
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .workout-tracking-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px; /* Rounded for a pill-like shape */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .back-button:hover {
+    background-color: #050505;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Adds a slight lift on hover */
+  }
+  
+  .back-button:active {
+    transform: translateY(0); /* Subtle feedback on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+  .add-workout-form,
+  .filter-section,
+  .workout-history {
+    margin-bottom: 30px;
+  }
+  
+  .add-workout-form h2 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+  }
+  
+  .add-workout-form label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .add-workout-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+  
+  .primary-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .filter-section input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+  
+  .workout-history h2 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+  }
+  
+  .workout-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .workout-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .workout-details p {
+    margin: 5px 0;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .secondary-button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .secondary-button:hover {
+    background-color: #3aa24d;
+  }
+  
+  .delete-button {
+    background-color: var(--delete-color);
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #a9443a;
+  }
+  
