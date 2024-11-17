@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #058c83;
+    --secondary-color: #46b35f;
+    --delete-color: #c2554a;
+    --background-gradient: linear-gradient(to right, #e0f7ec, #a8e6cf);
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nutrition-page-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .add-nutrition-log,
+  .macronutrient-lookup,
+  .filter-section,
+  .nutrition-history {
+    margin-bottom: 30px;
+  }
+  
+  .add-nutrition-log h2,
+  .macronutrient-lookup h2,
+  .filter-section h2,
+  .nutrition-history h2 {
+    color: var(--secondary-color);
+  }
+  
+  .add-nutrition-log label,
+  .macronutrient-lookup input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .add-nutrition-log input,
+  .macronutrient-lookup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+  
+  .primary-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .filter-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-button.reset {
+    background-color: var(--delete-color);
+  }
+  
+  .filter-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .nutrition-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nutrition-item {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  

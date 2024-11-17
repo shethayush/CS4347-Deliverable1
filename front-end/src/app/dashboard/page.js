@@ -68,6 +68,12 @@ export default function Dashboard() {
           >
             🍎 <span>Nutrition</span>
           </button>
+          <button
+            className="nav-item"
+            onClick={() => router.push("/goals")}
+          >
+            🎯 <span>Goals</span>
+          </button>
         </nav>
       </aside>
 
@@ -123,6 +129,12 @@ export default function Dashboard() {
                 </li>
               ))}
             </ul>
+            <button
+              onClick={() => router.push("/goals")}
+              className="action-button"
+            >
+              Add Goal
+            </button>
           </div>
         </section>
       </main>
