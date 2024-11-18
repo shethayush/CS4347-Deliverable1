@@ -26,17 +26,25 @@ export default function NutritionPage() {
   };
 
   const handleAddLog = () => {
-    setNutritionLogs([...nutritionLogs, newLog]);
-    setNewLog({ food: "", calories: "", date: "" });
-  };
+  if (!newLog.food || !newLog.calories || !newLog.date) {
+    alert("Please fill in all fields.");
+    return;
+  }
+  setNutritionLogs([...nutritionLogs, newLog]);
+  setNewLog({ food: "", calories: "", date: "" });
+}; //Handles if any empty string is there
 
   const handleMacronutrientLookup = (foodName) => {
-    if (macronutrients[foodName]) {
-      setMacronutrientLookup(macronutrients[foodName]);
-    } else {
-      setMacronutrientLookup(null);
-    }
-  };
+  const normalizedFoodName = foodName.trim().toLowerCase();
+  const foodKey = Object.keys(macronutrients).find(
+    (key) => key.toLowerCase() === normalizedFoodName
+  );
+  if (foodKey) {
+    setMacronutrientLookup(macronutrients[foodKey]);
+  } else {
+    setMacronutrientLookup(null);
+  }
+}; //handles case sensitivity
 
   const filteredLogs = filter
     ? nutritionLogs.filter((log) =>
@@ -65,17 +73,18 @@ export default function NutritionPage() {
               required
             />
           </label>
-          <label>
-            Calories:
-            <input
-              type="number"
-              name="calories"
-              value={newLog.calories}
-              onChange={handleInputChange}
-              placeholder="e.g., 350"
-              required
-            />
-          </label>
+         <label>
+              Calories:
+              <input
+                type="number"
+                name="calories"
+                value={newLog.calories}
+                onChange={handleInputChange}
+                placeholder="e.g., 350"
+                required
+                min="1"  //makes sure minimum number is 1, and not 0 or negative
+              />
+        </label>
           <label>
             Date:
             <input
